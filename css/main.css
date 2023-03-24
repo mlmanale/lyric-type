@@ -1,0 +1,31 @@
+/* Begin global styling variables */
+:root {
+    --start-font: 'Silkscreen', cursive;
+}
+/* End global styling variables */
+
+/* Begin start screen */
+h1,p {
+    font-family: var(--start-font);
+    text-align: center;
+}
+
+h1 {
+font-size: 400%;
+}
+
+p {
+    font-size: 200%;
+}
+
+.head-wrp {
+   margin-top: 15%;
+   margin-bottom: 15%;
+   background-image: none;
+}
+
+/* End start screen */
+
+/* Begin lyric screen */
+
+/* End lyric screen */
