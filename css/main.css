@@ -5,6 +5,9 @@
 /* End global styling variables */
 
 /* Begin start screen */
+body {
+  background-image: url("../img/pixel_space.png");
+}
 h1,p {
     font-family: var(--start-font);
     text-align: center;
@@ -12,16 +15,17 @@ h1,p {
 
 h1 {
 font-size: 400%;
+color:white;
 }
 
 p {
     font-size: 200%;
+    color:white;
 }
 
 .head-wrp {
    margin-top: 15%;
    margin-bottom: 15%;
-   background-image: none;
 }
 
 /* Bob - from Hover.css */
