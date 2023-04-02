@@ -1,4 +1,8 @@
 /* Begin global styling variables */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
     --start-font: 'Silkscreen', cursive;
 }
@@ -6,7 +10,7 @@
 
 /* Begin start screen */
 body {
-  background-image: url("../img/pixel_space.png");
+  /* background-image: url("../img/pixel_space.png"); */
 }
 h1,p {
     font-family: var(--start-font);
@@ -15,12 +19,12 @@ h1,p {
 
 h1 {
 font-size: 400%;
-color:white;
+color:black;
 }
 
 p {
     font-size: 200%;
-    color:white;
+    color:rgb(0, 0, 0);
 }
 
 .head-wrp {
@@ -97,4 +101,45 @@ p {
 
 /* Begin lyric screen */
 
+.lyric1-wrapper {
+  background-color: pink;
+}
+
+.lyric{
+  padding-top: 20%;
+  padding-bottom: 15%;
+}
+
+.link-wrapper {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.lyric2-wrapper {
+  background-color: antiquewhite;
+}
+
+.lyric3-wrapper {
+  background-color: cornflowerblue;
+}
+
+.lyric4-wrapper {
+  background-color: lightgoldenrodyellow;
+}
+
+.lyric5-wrapper {
+  background-color:lightskyblue;
+}
+
+.lyric6-wrapper {
+  background-color: lightsteelblue;
+}
+
+.lyric7-wrapper {
+  background-color:slategray;
+}
+
+.lyric8-wrapper {
+  background-color: pink;
+}
 /* End lyric screen */
