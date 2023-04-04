@@ -9,28 +9,79 @@ html {
 /* End global styling variables */
 
 /* Begin start screen */
-body {
-  /* background-image: url("../img/pixel_space.png"); */
+
+/* phone */
+@media screen and (max-width: 479px) {
+  .head-wrp {
+    margin-top: 70%;
+    margin-bottom: 15%;
+ }
+  h1 {
+    font-size: 300%;
+  }
+  p {
+    font-size: 90%;
+  }
+  .lyric{
+    padding-top: 80%;
+    padding-bottom: 75%;
+    }
+
 }
+
+/* desktop */
+@media screen and (min-width: 769px) {
+  .head-wrp {
+    margin-top: 15%;
+ }
+  h1 {
+    font-size: 700%;
+ }
+
+ p {
+   font-size: 200%;
+ }
+ .lyric{
+  padding-top: 10%;
+  padding-bottom: 8%;
+  /* padding-bottom: 18%; */
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .head-wrp {
+    margin-top: 45%;
+ }
+ h1 {
+   font-size: 400%;
+ }
+
+ p {
+   font-size: 200%;
+ }
+
+ .lyric{
+  padding-top: 60%;
+  padding-bottom: 50%;
+  }
+}
+
+
 h1,p {
     font-family: var(--start-font);
     text-align: center;
 }
 
 h1 {
-font-size: 400%;
-color:black;
+  color:black;
 }
 
 p {
-    font-size: 200%;
-    color:rgb(0, 0, 0);
+  color:black
 }
 
-.head-wrp {
-   margin-top: 15%;
-   margin-bottom: 15%;
-}
+
 
 /* Bob - from Hover.css */
 @-webkit-keyframes hvr-bob {
@@ -103,15 +154,96 @@ p {
 
 .lyric1-wrapper {
   background-color: pink;
+ 
 }
 
-.lyric{
-  padding-top: 20%;
-  padding-bottom: 15%;
+/* begin envelope, sourced from https://www.youtube.com/watch?v=4Hm26xcr_dQ w minor changes as needed */
+.envelope {
+  width: 500px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  background: #d1bab2;
+  cursor: pointer;
 }
+
+.top-side{
+  border-bottom: 250px solid white;
+  top: -250px;
+  transform-origin: bottom;
+  z-index: 6;
+  transform: rotateX(180deg);
+  transition: all .8s ease;
+  transition-delay: 0.6s;
+}
+
+.bottom-side{
+  border-bottom: 200px solid #e8e0de;
+  position: absolute !important;
+  bottom: -5px;
+  z-index: 4;
+}
+
+.top-side, .bottom-side {
+  border-left: 250px solid  transparent;
+  border-right: 250px solid  transparent;
+  position: relative;
+}
+
+.left-side {
+  border-left: 225px solid #d8cfcc;
+  position: absolute;
+  left: 0;
+}
+
+.right-side {
+  border-right: 225px solid #d8cfcc;;
+  position: absolute;
+  right: 0;
+}
+
+.left-side, .right-side {
+  border-top: 155px solid transparent;
+  border-bottom: 150px solid transparent;
+  top: 0;
+  z-index: 4;
+} 
+
+/* .envelope-image {
+  width: 90%;
+
+}
+*/
+
+.env-img {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: all 1s ease;
+}
+
+.envelope:hover .top-side {
+  transform: rotateX(0deg);
+  z-index: 2;
+  transition-delay: 0.3s;
+}
+
+.envelope:hover .env-img {
+  top: -40%;
+  z-index: 3;
+  transition-delay: 0.8s;
+}
+
+/* end envelope */
 
 .link-wrapper {
   text-align: center;
+  padding-top: 5%;
   padding-bottom: 5%;
 }
 
