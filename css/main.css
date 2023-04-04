@@ -8,8 +8,6 @@ html {
 }
 /* End global styling variables */
 
-/* Begin start screen */
-
 /* phone */
 @media screen and (max-width: 479px) {
   .head-wrp {
@@ -26,7 +24,6 @@ html {
     padding-top: 80%;
     padding-bottom: 75%;
     }
-
 }
 
 /* desktop */
@@ -44,7 +41,7 @@ html {
  .lyric{
   padding-top: 10%;
   padding-bottom: 8%;
-  /* padding-bottom: 18%; */
+
   }
 }
 
@@ -67,21 +64,18 @@ html {
   }
 }
 
-
 h1,p {
     font-family: var(--start-font);
     text-align: center;
 }
 
 h1 {
-  color:black;
+  color: black;
 }
 
 p {
-  color:black
+  color:white;
 }
-
-
 
 /* Bob - from Hover.css */
 @-webkit-keyframes hvr-bob {
@@ -148,16 +142,23 @@ p {
     animation-direction: normal, alternate;
   }
 
-/* End start screen */
 
 /* Begin lyric screen */
 
+.song h1 {
+  color:white;
+}
+
+.song p {
+  color:white;
+}
+
 .lyric1-wrapper {
-  background-color: pink;
+  background-color: rgb(165, 51, 70);
  
 }
 
-/* begin envelope, sourced from https://www.youtube.com/watch?v=4Hm26xcr_dQ w minor changes as needed */
+/* begin envelope, followed tutorial from https://www.youtube.com/watch?v=4Hm26xcr_dQ with changes as needed */
 .envelope {
   width: 500px;
   height: 300px;
@@ -210,12 +211,6 @@ p {
   z-index: 4;
 } 
 
-/* .envelope-image {
-  width: 90%;
-
-}
-*/
-
 .env-img {
   width: 90%;
   height: 90%;
@@ -233,7 +228,7 @@ p {
   transition-delay: 0.3s;
 }
 
-.envelope:hover .env-img {
+.envelope:hover .env-img,.envelope:focus .env-img {
   top: -40%;
   z-index: 3;
   transition-delay: 0.8s;
@@ -248,15 +243,52 @@ p {
 }
 
 .lyric2-wrapper {
-  background-color: antiquewhite;
+  background-color: rgb(88, 69, 118);
+}
+
+.lyric_two {
+  opacity: 1;
+  transition: 1s ease;
+}
+.lyric_two:hover {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 1s ease;
 }
 
 .lyric3-wrapper {
   background-color: cornflowerblue;
 }
 
+/* transition on this is so that after the mouse is no longer on the car it eases back */
+.car {
+  padding-bottom: 2.5%;
+  transform: rotateX(0vw);
+  transition: 2s ease;
+}
+
+/* car moves across screen on hover/focus/active, should be responsive considering I used vw */
+.car:hover, .car:focus, .car:active {
+  transform: translateX(100vw);
+  transition: 2s ease;
+}
+
 .lyric4-wrapper {
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(93, 139, 112);
+}
+/* hvr.grow from hover.css */
+.lyric_four {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.lyric_four:hover, .lyric_four:focus, .lyric_four:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .lyric5-wrapper {
