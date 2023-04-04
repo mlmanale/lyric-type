@@ -121,8 +121,8 @@ html {
   
   .bottom-side{
     border-bottom: 200px solid #e8e0de;
-    position: absolute !important;
-    bottom: -5px;
+    position: absolute;
+    bottom: 95px;
     z-index: 4;
   }
   
@@ -192,8 +192,8 @@ html {
   
   .bottom-side{
     border-bottom: 200px solid #e8e0de;
-    position: absolute !important;
-    bottom: -5px;
+    position: absolute;
+    bottom: 95px;
     z-index: 4;
   }
   
